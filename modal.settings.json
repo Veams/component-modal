@@ -1,0 +1,14 @@
+
+{
+    "type": "component",
+    "layout": "lyt-docs",
+    "contextData": "modal",
+    "paths": {
+        "scripts": "src/shared/components/modal/scripts/modal",
+        "styles": "src/shared/components/modal/styles/modal"
+    },
+    "subTemplates": [
+        "modal__body.hbs"
+    ],
+    "publish": true
+}

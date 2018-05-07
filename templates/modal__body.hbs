@@ -1,0 +1,39 @@
+<div id="{{options.settings.modalJsOptions.id}}" class="c-modal{{#if options.settings.modalContextClass}}--{{options.settings.modalContextClass}}{{else}}--default{{/if}}{{#if options.settings.modalClasses}} {{options.settings.modalClasses}}{{/if}}"
+		data-css="c-modal"
+		role="dialog"
+		aria-labelledby="modal-title-{{options.settings.modalJsOptions.id}}"
+		{{#if options.content.describedBy}}aria-describedby="describedby-{{options.settings.modalJsOptions.id}}"{{/if}}>
+
+	<div class="modal__backdrop" data-js-item="modal-backdrop"></div>
+
+	<div class="modal__wrapper">
+
+		<button type="button" class="modal__close-button" data-js-item="modal-close-btn" aria-label="close">
+			<span aria-hidden="true">x</span>
+		</button>
+
+		{{#with options.content.header.html}}
+			<div class="modal__header" id="modal-title-{{../options.settings.modalJsOptions.id}}">
+				{{{this}}}
+			</div>
+		{{/with}}
+
+		{{#if options.content.describedBy}}
+			<div id="describedby-{{options.settings.modalJsOptions.id}}">
+				{{options.content.describedBy}}
+			</div>
+		{{/if}}
+
+		<div class="modal__body">
+			{{{yield}}}
+		</div>
+
+		{{#with options.content.footer.html}}
+			<div class="modal__footer">
+				{{{this}}}
+			</div>
+		{{/with}}
+
+	</div>
+
+</div>

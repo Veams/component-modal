@@ -1,0 +1,88 @@
+$modal-z: 1000 !default;
+$modal-bg-color: #000 !default;
+$modal-content-color: #fff !default;
+$modal-font-size: 16px !default;
+$modal-line-height: 1.4 !default;
+$modal-font-family: Arial, sans-serif !default;
+
+/* ===================================================
+component: modal
+=================================================== */
+
+/* ---------------------------------------------------
+Global Styles
+--------------------------------------------------- */
+[data-css="c-modal"] {
+	position: fixed;
+	display: block;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0;
+	z-index: $modal-z;
+	transition: opacity 300ms ease-in-out;
+	font-size: $modal-font-size;
+	line-height: $modal-line-height;
+	font-family: $modal-font-family;
+
+	.is-modal-visible {
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+
+	/* Hidden class */
+	&.is-hidden {
+		display: none;
+	}
+
+	/* Animation class */
+	&.is-open {
+		opacity: 1;
+	}
+
+	.modal__backdrop {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: $modal-bg-color;
+		opacity: 0.85;
+	}
+
+	.modal__wrapper {
+		position: relative;
+		margin: 5vw auto;
+		width: 50vw;
+		padding: 20px;
+		border-radius: 5px;
+		background: $modal-content-color;
+
+		.modal__close-button {
+			float: right;
+			cursor: pointer;
+		}
+	}
+
+	.modal__body {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.modal__footer {
+	}
+}
+
+/* ---------------------------------------------------
+Context: Default
+--------------------------------------------------- */
+.c-modal--default {
+}
+
+/* ---------------------------------------------------
+Modal: Content
+--------------------------------------------------- */
+.is-modal-visible {
+	overflow-y: hidden;
+}

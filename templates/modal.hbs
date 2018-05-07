@@ -1,0 +1,9 @@
+<a href="#" class="c-cta--primary" data-css="c-cta"
+   data-js-module="modal"{{#if settings.modalJsOptions}}
+   data-js-options='{{stringify settings.modalJsOptions}}'{{/if}}>
+	<span class="cta__content">{{settings.btnTitle}}</span>
+</a>
+
+{{#wrapWith 'modal__body' settings=this.settings content=this.content}}
+	{{{content.body.html}}}
+{{/wrapWith}}

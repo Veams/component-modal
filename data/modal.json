@@ -1,0 +1,71 @@
+{
+	"variations": {
+		"simple": {
+			"docs": {
+				"variationName": "Simple"
+			},
+			"settings": {
+				"modalContextClass": "default",
+				"modalClasses": "is-hidden",
+				"btnTitle": "Open Modal",
+				"modalJsOptions": {
+					"id": "modal-1"
+				}
+			},
+			"content": {
+				"header": {
+					"html": "<h3>Modal heading</h3>"
+				},
+				"body": {
+					"html": "<hr><ul><li><a href=\"#\">Body Link 1</a></li><li><a href=\"#\">Body Link 2</a></li></ul> <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>"
+				},
+				"footer": {
+					"html": "<button type=\"button\">Footer Button</button>"
+				}
+			}
+		},
+		"complex": {
+			"docs": {
+				"variationName": "Complex"
+			},
+			"settings": {
+				"modalContextClass": "default",
+				"modalClasses": "is-hidden",
+				"btnTitle": "Open Modal",
+				"modalJsOptions": {
+					"id": "modal-2"
+				}
+			},
+			"content": {
+				"describedBy": "This text should describe your form",
+				"header": {
+					"html": "<h3>Modal heading</h3>"
+				},
+				"body": {
+					"html": "<hr><label>Checkbox<input type=\"checkbox\"></label><label>Radio<input type=\"radio\"></label> <textarea>textarea</textarea> <select><option value=\"value1\">Value 1</option><option value=\"value2\" selected>Value 2</option></select> <input type=\"submit\" value=\"Send\">"
+				},
+				"footer": {
+					"html": "<hr><a href=\"#\">Footer Link</a>"
+				}
+			}
+		},
+		"video": {
+			"docs": {
+				"variationName": "Video (without Header and Footer)"
+			},
+			"settings": {
+				"modalContextClass": "default",
+				"modalClasses": "is-hidden",
+				"btnTitle": "Open Modal",
+				"modalJsOptions": {
+					"id": "modal-3"
+				}
+			},
+			"content": {
+				"body": {
+					"html": "<video src=\"media/SampleVideo_720x480_1mb.mp4\" controls></video>"
+				}
+			}
+		}
+	}
+}
