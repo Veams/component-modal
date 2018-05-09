@@ -8,17 +8,16 @@
  */
 
 // Imports
-import { Veams } from 'app.veams';
-import VeamsComponent from 'veams/src/js/common/component'; // Only use that in combination with browserify
-// import VeamsComponent from 'veams/lib/common/component'; // Can be used in general
-import transitionEndEvent from 'veams/src/js/utils/helpers/transition-end-event';
+import Component from '@veams/component';
+import $ from '@veams/query';
+import transitionEndEvent from '@veams/lib/detection/transition-end-event';
 
-// Variables
-const $ = Veams.$;
-const Helpers = Veams.helpers;
-
-class Modal extends VeamsComponent {
-
+class Modal extends Component {
+	$el = $(this.el);
+	$body = $('body');
+	$modal = $('#' + this.options.id);
+	$backdrop = this.$modal.find(this.options.backdrop);
+	$closeBtn = this.$modal.find(this.options.closeBtn);
 	isOpen = false;
 
 	/**
@@ -68,19 +67,8 @@ class Modal extends VeamsComponent {
 	*/
 	get subscribe() {
 		return {
-			'{{Veams.EVENTS.modal.close}}': 'toggleVisibility'
+			'{{this.context.EVENTS.modal.close}}': 'toggleVisibility'
 		};
-	}
-
-	/**
-	 * Initialize the view
-	 *
-	 */
-	initialize() {
-		this.$body = $('body');
-		this.$modal = $('#' + this.options.id);
-		this.$backdrop = this.$modal.find(this.options.backdrop);
-		this.$closeBtn = this.$modal.find(this.options.closeBtn);
 	}
 
 	/**

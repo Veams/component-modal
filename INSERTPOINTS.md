@@ -13,10 +13,12 @@
 
 ### Include: JavaScript
 
-#### Initializing in Veams V5
+
+#### Initializing in Veams (@veams/plugin-modules v1.x)
+
 ``` js
-// @INSERT :: START @tag: js-init-v5 //
-Veams.modules.add('modal', Modal);
+// @INSERT :: START @tag: js-init-modules-@1 //
+Veams.modules.add(namespace: 'modal', module: Modal);
 // @INSERT :: END
 ```
 

@@ -1,0 +1,15 @@
+{
+    "publish": true,
+    "type": "component",
+    "layout": "lyt-docs",
+    "contextData": "modal",
+    "subTemplates": [
+        "modal__body.hbs"
+    ],
+    "scssFiles": [
+        "modal.scss"
+    ],
+    "jsFiles": [
+        "modal.js"
+    ]
+}

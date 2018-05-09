@@ -26,21 +26,30 @@ Global Styles
 	line-height: $modal-line-height;
 	font-family: $modal-font-family;
 
-	.is-modal-visible {
-		overflow-x: hidden;
-		overflow-y: auto;
-	}
-
+	/*
+	Top-Level Modifiers
+	----------------------- */
 	/* Hidden class */
 	&.is-hidden {
-		display: none;
+		display: none !important;
 	}
 
 	/* Animation class */
 	&.is-open {
-		opacity: 1;
+		opacity: 1 !important;
 	}
 
+	/*
+	Modifiers
+	----------------------- */
+	.is-modal-visible {
+		overflow-x: hidden !important;
+		overflow-y: auto !important;
+	}
+
+	/*
+	Elements
+	----------------------- */
 	.modal__backdrop {
 		position: fixed;
 		width: 100%;
@@ -83,6 +92,12 @@ Context: Default
 /* ---------------------------------------------------
 Modal: Content
 --------------------------------------------------- */
-.is-modal-visible {
-	overflow-y: hidden;
+.c-modal--content {
+
+	/*
+	Modifiers
+	----------------------- */
+	.is-modal-visible {
+		overflow-y: hidden !important;
+	}
 }
